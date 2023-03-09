@@ -1,0 +1,126 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #ecf0f1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.meetapp-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left:20px;
+    right: 20px;
+
+    & .col-right {
+        flex: 60%;
+        background-image: url('bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: multiply;
+        background-color: #2c3e50;
+        padding: 50px 30px 50px 30px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        & .meeting-room-title {
+            color: #fff;
+            font-size:48px;
+            font-weight: 400;
+            text-decoration: underline;
+            margin-bottom: 15px;
+            @media screen and (max-width: 960px) {
+                font-size:36px;
+            }
+        }
+
+        & .book-status {
+            color:#fff;
+            font-size: 96px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            @media screen and (max-width: 960px) {
+                font-size:72px;
+            }
+        }
+
+        & .meeting-title {
+            background-color: rgba(0, 0, 0, 0.5);
+            color:#fff;
+            padding:20px;
+            border-radius: 10px;
+            font-size:32px;
+            @media screen and (max-width: 960px) {
+                font-size:24px;
+            }
+        }
+
+        & .watch {
+            position: absolute;
+            bottom: 50px;
+            color:#fff;
+            font-weight: 100;
+            font-size:64px;
+            @media screen and (max-width: 960px) {
+                font-size:48px;
+            }
+        }
+    }
+
+    & .col-left {
+        flex: 40%;
+        background-color: #2c3e50;
+        padding: 50px 20px 50px 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        & .meeting-lists {
+            list-style: none;
+
+            & li {
+                border-bottom: #34495e dotted 2px;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+                @media screen and (max-width: 960px) {
+                    padding-bottom: 15px;
+                    margin-bottom: 15px;
+                }
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                & .meeting-times {
+                    color:#bdc3c7;
+                    font-size:16px;
+                    @media screen and (max-width: 960px) {
+                        font-size:12px;
+                    }
+                }
+
+                & .meeting-name {
+                    color:#fff;
+                    font-weight: 500;
+                    font-size:24px;
+                    margin:5px 0px 5px 0px;
+                    @media screen and (max-width: 960px) {
+                        font-size:16px;
+                    }
+                }
+
+                & .participants {
+                    color:#bdc3c7;
+                    font-size:16px;
+                    @media screen and (max-width: 960px) {
+                        font-size:12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
